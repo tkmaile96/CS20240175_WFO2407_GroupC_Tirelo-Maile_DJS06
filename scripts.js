@@ -62,5 +62,10 @@ function productsFunction(products) {
   console.log("Product names:");
   products.forEach(product => console.log(product.product)); //logging each product name
 
-  //
+  //2. Sum of all valid prices
+  const sumOfPrices = products
+  .filter(product => product.price && !isNaN(product.price)) // filtering products with valid prices
+  .map(product => product.price) // mapping products to their prices
+  .reduce((total, price) => total + price, 0); // summing up the prices
+  console.log("Total prices:", sumOfPrices);
 }
