@@ -24,10 +24,16 @@ function provinceAndName(provinces, names) {
   //log each name with a matching province
   names.forEach((name, i)=> console.log (`${name} is from ${provinces[i]}`)); //logging each name with a matching province
 
-
   // 2. Upper Transformation of provinces
   const upperProvinces = provinces.map(province => province.toUpperCase());
   console.log(upperProvinces); //logging the upper case provinces list
   
+  // 3. Name lenghts
+  const nameLengths = names.map(name => name.length);
+  console.log(nameLengths); //logging the name lengths list
+
+  // 4. Sorting Provinces Alphabetically
+  const sortedProvinces = [...provinces].sort(); //spread operator to create a copy of the array
+  console.log(sortedProvinces);
 }
 provinceAndName(provinces, names);
