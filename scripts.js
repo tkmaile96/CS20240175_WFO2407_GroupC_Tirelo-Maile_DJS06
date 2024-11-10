@@ -20,5 +20,11 @@ function ProvinceAndName(provinces, names) {
   // 1.For Each Basics
   names.forEach(name => console.log(name)); //logging each name in the list
   provinces.forEach(province => console.log(province)); //logging each province in the list
+
+  //log each name with a matching province
+  names.forEach((name, i)=> console.log (`${name} is from ${provinces[i]}`)); //logging each name with a matching province
+
+
+  // 2. Upper Transformation
   
 }
