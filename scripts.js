@@ -12,4 +12,13 @@ const products = [
   { product: 'avocado', price: "8" },
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
-]
+];
+
+// Function to combbine all the functionality of the province/name data sets
+function ProvinceAndName(provinces, names) {
+
+  // 1.For Each Basics
+  names.forEach(name => console.log(name)); //logging each name in the list
+  provinces.forEach(province => console.log(province)); //logging each province in the list
+  
+}
