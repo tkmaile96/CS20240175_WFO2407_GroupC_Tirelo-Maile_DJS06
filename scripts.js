@@ -35,5 +35,12 @@ function provinceAndName(provinces, names) {
   // 4. Sorting Provinces Alphabetically
   const sortedProvinces = [...provinces].sort(); //spread operator to create a copy of the array
   console.log(sortedProvinces);
+
+  // 5. Filter out provinces with the word "Cape"
+  const filteredProvinces = provinces.filter(province => !province.includes('Cape'));
+  console.log(filteredProvinces.length); // logging the number of provinces without the word "Cape"
+
+  // 6. Checking for "S" on each name
+  const nameHasLetter = names.some(name => name.includes('S'));
+  console.log(nameHasLetter); //logging true if any name contains the letter "S"
 }
-provinceAndName(provinces, names);
