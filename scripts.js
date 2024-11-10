@@ -83,5 +83,12 @@ function productsFunction(products) {
   }), {highets: -Infinity, lowest: Infinity });
   console.log(`Highest price: ${highestPriceProduct.highest}, Lowest Price: ${highestPriceProduct.lowest} `);
 
+  //5. Transform product into an object with name and price
+  const transformedProducts = Object.fromEntries(
+    products.map(({ product, price }, i) => [i, { name: product, cost: price }])
+  );
+  
+  console.log("Transformed products:", transformedProducts);
+
 }
 
