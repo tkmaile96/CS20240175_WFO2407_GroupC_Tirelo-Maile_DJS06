@@ -80,7 +80,7 @@ function productsFunction(products) {
   .reduce((j, price) => ({
     highest: Math.max(j.highest, price),
     lowest: Math.min(j.lowest, price),
-  }), {highets: -Infinity, lowest: Infinity });
+  }), {highest: -Infinity, lowest: Infinity });
   console.log(`Highest price: ${highestPriceProduct.highest}, Lowest Price: ${highestPriceProduct.lowest} `);
 
   //5. Transform product into an object with name and price
@@ -89,6 +89,7 @@ function productsFunction(products) {
   );
   
   console.log("Transformed products:", transformedProducts);
-
 }
+//call the function
+productsFunction(products)
 
