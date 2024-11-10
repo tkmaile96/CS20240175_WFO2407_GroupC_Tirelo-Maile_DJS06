@@ -15,7 +15,7 @@ const products = [
 ];
 
 // Function to combbine all the functionality of the province/name data sets
-function ProvinceAndName(provinces, names) {
+function provinceAndName(provinces, names) {
 
   // 1.For Each Basics
   names.forEach(name => console.log(name)); //logging each name in the list
@@ -25,6 +25,9 @@ function ProvinceAndName(provinces, names) {
   names.forEach((name, i)=> console.log (`${name} is from ${provinces[i]}`)); //logging each name with a matching province
 
 
-  // 2. Upper Transformation
+  // 2. Upper Transformation of provinces
+  const upperProvinces = provinces.map(province => province.toUpperCase());
+  console.log(upperProvinces); //logging the upper case provinces list
   
 }
+provinceAndName(provinces, names);
