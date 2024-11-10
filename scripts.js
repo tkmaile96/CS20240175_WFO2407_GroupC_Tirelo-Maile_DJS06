@@ -52,3 +52,15 @@ function provinceAndName(provinces, names) {
 }
 // Call the function with the provided data
 provinceAndName(provinces, names);
+
+
+
+
+// Create a function of products with prices that are numbers
+function productsFunction(products) {
+  //1. Product Names
+  console.log("Product names:");
+  products.forEach(product => console.log(product.product)); //logging each product name
+
+  //
+}
