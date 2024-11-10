@@ -68,4 +68,20 @@ function productsFunction(products) {
   .map(product => product.price) // mapping products to their prices
   .reduce((total, price) => total + price, 0); // summing up the prices
   console.log("Total prices:", sumOfPrices);
+
+  //3. Filter products with names <= 5 characters
+  const ProductWithShortName = products.filter(product => product.product.length <= 5); // 
+  console.log("Product with short names:", ProductWithShortName); 
+  
+  //4. Find the product with the highest price
+  const highestPriceProduct = products
+  .filter(product => product.price && !isNaN(product.price))// filter product with valid prices
+  .map(product => Number(product.price)) // Convert prices to numbers
+  .reduce((j, price) => ({
+    highest: Math.max(j.highest, price),
+    lowest: Math.min(j.lowest, price),
+  }), {highets: -Infinity, lowest: Infinity });
+  console.log(`Highest price: ${highestPriceProduct.highest}, Lowest Price: ${highestPriceProduct.lowest} `);
+
 }
+
