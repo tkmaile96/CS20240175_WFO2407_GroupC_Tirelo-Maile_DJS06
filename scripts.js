@@ -41,6 +41,14 @@ function provinceAndName(provinces, names) {
   console.log(filteredProvinces.length); // logging the number of provinces without the word "Cape"
 
   // 6. Checking for "S" on each name
-  const nameHasLetter = names.some(name => name.includes('S'));
+  const nameHasLetter = names.map(name => name.includes('S'));
   console.log(nameHasLetter); //logging true if any name contains the letter "S"
+
+  // 7. Create an object Mapping names to provinces
+  const nameToProvince = Object.fromEntries (
+    names.map((name, i) => [name, provinces[i]])
+  );
+  console.log(nameToProvince); //logging the object mapping names to provinces
 }
+// Call the function with the provided data
+provinceAndName(provinces, names);
